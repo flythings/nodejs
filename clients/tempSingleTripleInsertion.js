@@ -18,7 +18,6 @@ const http = require('request');
 const cron = require("cron").CronJob;
 const readlineSync = require('readline-sync');
 const cpu = require('windows-cpu');
-//const exec = require('child_process').exec;
 
 const util = require("../common/util.js");
 const obsrequest = require("../common/observationsRequest.js");
@@ -153,17 +152,6 @@ function cpuPrint () {
 	});
 }
 function init () {
-	//	var child = exec("cat /sys/class/thermal/thermal_zone0/temp", function (error, stdout, stderr) {
-	//		if (error !== null) {
-	//			console.log('exec error: ' + error);
-	//		} else {
-	//			// You must send time (X axis) and a temperature value (Y axis) 
-	//			var date = new Date().getTime();
-	//			var temp = parseFloat(stdout)/1000;
-	//			console.log(date, temp);
-	//			//			socket.emit('temperatureUpdate', date, temp); 
-	//		}
-	//	});
 	var job = new cron({
 		cronTime: '*/' + minutes + ' * * * *',
 		onTick: function() {

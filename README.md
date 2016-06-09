@@ -112,20 +112,18 @@ EndPoint: /observation/single
 
 Object Request:
 
-OPTION 1:
 ```JSON
-{
-seriesId: {{Identifier}},
-value: {{Value}},
-time: {{Time in ISO Standar Format Or Timestamp}}
+OPTION 1:
+{	"seriesId": <<Identifier>>,
+	"value": <<Value>>,
+	"time": <<Time in ISO Standar Format Or Timestamp>>
 }
 
 OPTION 2:
-```JSON
-{
-foi: {{Foi name identifier}},
-procedure: {{Sensor name identifier}},
-property: {{Property name identifier}},
-value: {{Value}},
-time: {{Time in ISO Standar Format Or Timestamp}}
+{	"foi": <<Foi name identifier>>,
+	"procedure": <<Sensor name identifier>>,
+	"property": <<Property name identifier>>,
+	"value": <<Value>>,
+	"time": <<Time in ISO Standar Format Or Timestamp>>
 }
+```

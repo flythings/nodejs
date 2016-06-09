@@ -2,7 +2,7 @@
 
 //-**********************************************************************************************-
 // DEFAULT PROPERTIES
-const SERVERNAME_DEFAULT = "http:/beta.flythings.io/api/";
+const SERVERNAME_DEFAULT = "beta.flythings.io/api/";
 const FOI_DEFAULT = "Foi Test";
 const PROCEDURE_DEFAULT = "Procedure Test";
 const PROPERTY_DEFAULT = "Property Test";

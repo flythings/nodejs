@@ -3,7 +3,7 @@
 
 //-**********************************************************************************************-
 // DEFAULT PROPERTIES
-const SERVERNAME_DEFAULT = "http:/beta.flythings.io/api/";
+const SERVERNAME_DEFAULT = "beta.flythings.io/api/";
 //-**********************************************************************************************-
 
 const path = require('path');
@@ -27,6 +27,7 @@ if (!properties.user) {
 	process.exit();
 }
 const baseServerName = properties.serverName? properties.serverName : SERVERNAME_DEFAULT;
+const debug = properties.debug? properties.debug : false;
 //-**********************************************************************************************-
 
 //-**********************************************************************************************-
@@ -57,6 +58,10 @@ function init () {
 			headers: HEADERS,
 			method: METHOD
 		};
+		if (debug) {
+			util.print("Request:");
+			util.print(JSON.stringify(options));
+		}
 		http(options, function (err, response, body) {
 			if (response.statusCode >= 400) {
 				error(JSON.parse(body));

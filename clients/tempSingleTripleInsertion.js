@@ -2,7 +2,7 @@
 
 //-**********************************************************************************************-
 // DEFAULT PROPERTIES
-const SERVERNAME_DEFAULT = "http:/beta.flythings.io/api/";
+const SERVERNAME_DEFAULT = "beta.flythings.io/api/";
 const FOI_DEFAULT = "PC Flythings";
 const PROCEDURE_DEFAULT = "CPU-Memory";
 const MINUTES_DEFAULT = 15;

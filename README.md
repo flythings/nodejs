@@ -104,13 +104,13 @@ Available Properties:
 
 ## API Request Documentation
 
-**Single Insertion Example**
+#### Single Insertion Example
 
-Method: PUT
+**Method**: PUT
 
-EndPoint: /observation/single
+**EndPoint**: /observation/single
 
-Object Request:
+**Object Request**:
 
 ```JSON
 OPTION 1:
@@ -132,13 +132,13 @@ OPTION 2:
 }
 ```
 
-**Multiple Insertion Example**
+#### Multiple Insertion Example
 
-Method: PUT
+**Method**: PUT
 
-EndPoint: /observation/multiple
+**EndPoint**: /observation/multiple
 
-Object Request:
+**Object Request**:
 
 ```JSON
 OPTION 1:
@@ -164,14 +164,15 @@ OPTION 2:
 }
 ```
 
-**CSV Insertion Example**
+#### CSV Insertion Example
 
-Method: POST
+**Method**: POST
 
-EndPoint From File: /observation/csv
-EndPoint Without File: /observation/csv/nofile
+**EndPoint From File**: /observation/csv
 
-Object Request:
+**EndPoint Without File**: /observation/csv/nofile
+
+**Object Request**:
 
 > OPTION 1
 > <"Foi name identifier">;<"Procedure name identifier">;<"Property name identifier">;<"Time in ISO Standar Format Or Timestamp">;<"Value as number">;<"Unit name identifier | Optional">;

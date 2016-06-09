@@ -2,7 +2,7 @@
 
 //-**********************************************************************************************-
 // DEFAULT PROPERTIES
-const SERVERNAME_DEFAULT = "http:/beta.flythings.io/api/";
+const SERVERNAME_DEFAULT = "beta.flythings.io/api/";
 const UNIT_DEFAULT = "Unit Test";
 const MINUTES_DEFAULT = 15;
 const NUM_SERIES_DEFAULT = 50;

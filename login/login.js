@@ -1,5 +1,11 @@
 "use strict";
 
+
+//-**********************************************************************************************-
+// DEFAULT PROPERTIES
+const SERVERNAME_DEFAULT = "http:/beta.flythings.io/api/";
+//-**********************************************************************************************-
+
 const path = require('path');
 const appRoot = path.resolve(__dirname);
 
@@ -16,10 +22,11 @@ try {
 	util.print("Error: Unreachable the properties.json file on the root directory of the project");
 	process.exit();
 }
-if (!properties.user || !properties.serverName) {
-	util.print("Error: User or server name properties are not defined in properties.json");
+if (!properties.user) {
+	util.print("Error: User property are not defined in properties.json");
 	process.exit();
 }
+const baseServerName = properties.serverName? properties.serverName : SERVERNAME_DEFAULT;
 //-**********************************************************************************************-
 
 //-**********************************************************************************************-
@@ -29,7 +36,7 @@ var password;
 
 //-**********************************************************************************************-
 // CONFIGURATION VALUES
-const SERVER_NAME = properties.serverName + 'login/';
+const SERVER_NAME = baseServerName + 'login/';
 const URL = "http://" + SERVER_NAME;
 const METHOD = "GET";
 //-**********************************************************************************************-

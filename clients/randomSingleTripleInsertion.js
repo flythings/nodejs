@@ -2,12 +2,12 @@
 
 //-**********************************************************************************************-
 // DEFAULT PROPERTIES
+const SERVERNAME_DEFAULT = "http:/beta.flythings.io/api/";
 const FOI_DEFAULT = "Foi Test";
 const PROCEDURE_DEFAULT = "Procedure Test";
 const PROPERTY_DEFAULT = "Property Test";
 const UNIT_DEFAULT = "Unit Test";
 const MINUTES_DEFAULT = 15;
-const NUM_SERIES_DEFAULT = 50;
 //-**********************************************************************************************-
 
 //-**********************************************************************************************-
@@ -32,17 +32,14 @@ try {
 	util.print("Error: Unreachable the properties.json file on the root directory of the project");
 	process.exit();
 }
-if (!properties.serverName) {
-	util.print("Error: Server name property are not defined in properties.json");
-	process.exit();
-}
+const baseServerName = properties.serverName? properties.serverName : SERVERNAME_DEFAULT;
 const pkg = JSON.parse(fs.readFileSync(appRoot + '/../package.json', 'utf8'));
 //-**********************************************************************************************-
 
 //-**********************************************************************************************-
 // WELCOME MESSAGES
 console.log("*************************************************************************************");
-console.log("			Welcome to the multiple insert observations");
+console.log("			Welcome to the single insert observations");
 console.log("*************************************************************************************");
 util.nl();
 util.print("Project executing: " + pkg.name + " (" + pkg.version + ")");
@@ -56,7 +53,7 @@ const login = require("../login/login.js");
 
 //-**********************************************************************************************-
 // CONFIGURATION PARAMETERS
-const SERVER_NAME = properties.serverName + 'observation/multiple';
+const SERVER_NAME = baseServerName + 'observation/single';
 const URL = "http://" + SERVER_NAME;
 const METHOD = "PUT";
 
@@ -75,7 +72,6 @@ login.login(function (success) {
 });
 
 const minutes = properties.minutes? properties.minutes : MINUTES_DEFAULT;
-const num_series = properties.numSeries? properties.numSeries : NUM_SERIES_DEFAULT;
 const foi = properties.foi? properties.foi : FOI_DEFAULT;
 const procedure = properties.procedure? properties.procedure : PROCEDURE_DEFAULT;
 const property = properties.property? properties.property : PROPERTY_DEFAULT;
@@ -84,23 +80,16 @@ const unit = properties.unit? properties.unit : UNIT_DEFAULT;
 
 //-**********************************************************************************************-
 // FUNCTIONALITY METHODS
-function createObservation (index) {
+function createObservation () {
 	var observation = {
-		foi: foi + " " + index,
-		procedure: procedure + " " + index,
-		observableProperty: property + " " + index,
+		foi: foi,
+		procedure: procedure,
+		observableProperty: property,
 		time: util.now() * 1000,
 		value: util.random(10, 40),
-		uom: unit + " " + index
+		uom: unit
 	};
 	return observation;
-}
-function createObservations () {
-	var observations = [];
-	for (var i = 0 ; i < num_series; i++) {
-		observations.push(createObservation(i));
-	}
-	return {observations : observations };
 }
 
 function sendData () {
@@ -108,7 +97,7 @@ function sendData () {
 		url: URL,
 		headers: HEADERS,
 		method: METHOD,
-		body: createObservations(),
+		body: createObservation(),
 		json: true
 	};
 	obsrequest(opts, function (body, status) {

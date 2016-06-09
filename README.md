@@ -117,15 +117,15 @@ OPTION 1:
 {	"foi": "<<Foi name identifier>>",
 	"procedure": "<<Sensor name identifier>>",
 	"property": "<<Property name identifier>>",
-	"value": "<<Value>>",
-	"unit": "<<Unit name identifier>>",
+	"value": "<<Value as number>>",
+	"unit": "<<Unit name identifier | Optional>>",
 	"time": "<<Time in ISO Standar Format Or Timestamp>> | Optional",
 	"geom": "<<Geom Object format with the OGC Standar>> | Optional" 
 }
 
 OPTION 2:
 {	"seriesId": "<<Identifier>>",
-	"value": "<<Value>>",
+	"value": "<<Value as number>>",
 	"unit": "<<Unit name identifier>> | Optional",
 	"time": "<<Time in ISO Standar Format Or Timestamp>> | Optional",
 	"geom": "<<Geom Object format with the OGC Standar>> | Optional"
@@ -147,7 +147,7 @@ OPTION 1:
 		"procedure": "<<Sensor name identifier>>",
 		"property": "<<Property name identifier>>",
 		"value": "<<Value as number>>",
-		"unit": "<<Unit name identifier>>",
+		"unit": "<<Unit name identifier | Optional>>",
 		"time": "<<Time in ISO Standar Format Or Timestamp>> | Optional",
 		"geom": "<<Geom Object format with the OGC Standar>> | Optional" 
 	}, "..."]

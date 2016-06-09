@@ -142,23 +142,25 @@ Object Request:
 
 ```JSON
 OPTION 1:
-{ "observations": [{	"foi": "<<Foi name identifier>>",
-	"procedure": "<<Sensor name identifier>>",
-	"property": "<<Property name identifier>>",
-	"value": "<<Value as number>>",
-	"unit": "<<Unit name identifier>>",
-	"time": "<<Time in ISO Standar Format Or Timestamp>> | Optional",
-	"geom": "<<Geom Object format with the OGC Standar>> | Optional" 
-}, ...]
+{ "observations": [
+	{	"foi": "<<Foi name identifier>>",
+		"procedure": "<<Sensor name identifier>>",
+		"property": "<<Property name identifier>>",
+		"value": "<<Value as number>>",
+		"unit": "<<Unit name identifier>>",
+		"time": "<<Time in ISO Standar Format Or Timestamp>> | Optional",
+		"geom": "<<Geom Object format with the OGC Standar>> | Optional" 
+	}, "..."]
 }
 
 OPTION 2:
-{ "observations": [{	"seriesId": "<<Number Series Identifier>>",
-	"value": "<<Value as number>>",
-	"unit": "<<Unit name identifier>> | Optional",
-	"time": "<<Time in ISO Standar Format Or Timestamp>> | Optional",
-	"geom": "<<Geom Object format with the OGC Standar>> | Optional"
-}, ...]
+{ "observations": [
+	{	"seriesId": "<<Number Series Identifier>>",
+		"value": "<<Value as number>>",
+		"unit": "<<Unit name identifier>> | Optional",
+		"time": "<<Time in ISO Standar Format Or Timestamp>> | Optional",
+		"geom": "<<Geom Object format with the OGC Standar>> | Optional"
+	}, "..."]
 }
 ```
 
@@ -172,7 +174,7 @@ EndPoint Without File: /observation/csv/nofile
 Object Request:
 
 > OPTION 1
-> <<Foi name identifier>>;<<Procedure name identifier>>;<<Property name identifier>>;<<Time in ISO Standar Format Or Timestamp>>;<<Value as number>>;<<Unit name identifier | Optional>>;
+> <Foi name identifier>;<Procedure name identifier>;<Property name identifier>;<Time in ISO Standar Format Or Timestamp>;<Value as number>;<Unit name identifier | Optional>;
 
 > OPTION 2
-> <<Number Series Identifier>>;<<Time in ISO Standar Format Or Timestamp>>;<<Value as number>>;<<Unit name identifier | Optional>>;
+> <Number Series Identifier>;<Time in ISO Standar Format Or Timestamp>;<Value as number>;<Unit name identifier | Optional>;

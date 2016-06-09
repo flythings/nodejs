@@ -151,20 +151,6 @@ function cpuPrint () {
 			sendData(createObservation("Memory Usage", "Mb", results.usageInMb));
 		}
 	});
-	//	cpu.processLoad(function(error, results) {
-	//		if(error) {
-	//			return console.log(error);
-	//		}
-	//
-	//		console.log('Total Process Load: ', results);
-	//	});
-	//	cpu.cpuInfo(function(error, results) {
-	//		if(error) {
-	//			return console.log(error);
-	//		}
-	//
-	//		console.log('Installed Processors: ', results);
-	//	});
 }
 function init () {
 	//	var child = exec("cat /sys/class/thermal/thermal_zone0/temp", function (error, stdout, stderr) {

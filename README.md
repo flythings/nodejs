@@ -19,9 +19,11 @@ The general properties configuration:
 
 ## Temp Single Triple Insertion
 
-File: clients/tempSingleTripleInsertion.js
+**Description**: node script that insert the cpu data to the flythings monitoring system. Insert the cpu precent usage, mb memory and processors number of nodejs and chrome.
 
-Execution: node clients/tempSingleTripleInsertion.js (from this path)
+**File**: clients/tempSingleTripleInsertion.js
+
+**Execution**: node clients/tempSingleTripleInsertion.js (from this path)
 
 Available Properties:
 * foi: (Optional, Default PC Flythings) the interest thing name to monitoring.
@@ -29,11 +31,11 @@ Available Properties:
 
 ## Random Id From Date Insertion
 
-Description: random data insertions to generate observations from specific date to another specific date, with specific series identifier. 
+**Description**: random data insertions to generate observations from specific date to another specific date, with specific series identifier. 
 
-File: clients/randomIdFromDateInsertion.js
+**File**: clients/randomIdFromDateInsertion.js
 
-Execution: node clients/randomIdFromDateInsertion.js (from this path)
+**Execution**: node clients/randomIdFromDateInsertion.js (from this path)
 
 Available Properties:
 * series: (Optional, Default readline process) series identifier number where make the insertions.
@@ -44,11 +46,11 @@ Available Properties:
 
 ## Random Triple From Date Insertion
 
-Description: random data insertions to generate observations from specific date to another specific date, without series identifier, but with the things names.
+**Description**: random data insertions to generate observations from specific date to another specific date, without series identifier, but with the things names.
 
-File: clients/randomTripleInsertion.js
+**File**: clients/randomTripleInsertion.js
 
-Execution: node clients/randomMultipleTripleInsertion.js (from this path)
+**Execution**: node clients/randomMultipleTripleInsertion.js (from this path)
 
 Available Properties:
 * foi: (Optional, Default Foi Test) the interest thing name to monitoring.
@@ -61,11 +63,11 @@ Available Properties:
 
 ## Random Single Id Insertion
 
-Description: random data insertion with an specific frequency and series identifier.
+**Description**: random data insertion with an specific frequency and series identifier.
 
-File: clients/randomSingleTripleInsertion.js
+**File**: clients/randomSingleTripleInsertion.js
 
-Execution: node clients/randomSingleTripleInsertion.js (from this path)
+**Execution**: node clients/randomSingleTripleInsertion.js (from this path)
 
 Available Properties:
 * series: (Optional, Default readline process) series identifier number where make the insertions.
@@ -73,11 +75,11 @@ Available Properties:
 
 ## Random Single Triple Insertion
 
-Description: random data insertion with an specific frequency and series identifier unkown, but with the things names.
+**Description**: random data insertion with an specific frequency and series identifier unkown, but with the things names.
 
-File: clients/randomSingleTripleInsertion.js
+**File**: clients/randomSingleTripleInsertion.js
 
-Execution: node clients/randomSingleTripleInsertion.js (from this path)
+**Execution**: node clients/randomSingleTripleInsertion.js (from this path)
 
 Available Properties:
 * foi: (Optional, Default Foi Test) the interest thing name to monitoring.
@@ -87,11 +89,11 @@ Available Properties:
 
 ## Random Multiple Triple Insertion
 
-Description: random data insertion with an specific frequency and series identifier unkown, but with the things names, and multiple observations each request.
+**Description**: random data insertion with an specific frequency and series identifier unkown, but with the things names, and multiple observations each request.
 
-File: clients/randomMultipleTripleInsertion.js
+**File**: clients/randomMultipleTripleInsertion.js
 
-Execution: node clients/randomMultipleTripleInsertion.js (from this path)
+**Execution**: node clients/randomMultipleTripleInsertion.js (from this path)
 
 Available Properties:
 * foi: (Optional, Default Foi Test) the interest thing name to monitoring.
@@ -99,3 +101,29 @@ Available Properties:
 * property: (Optional, Default Property Test) the property name where we register the data.
 * unit: (Optional, Default Unit Test) unit name of the data insertions (P. ej. kWh, ºC, etc.)
 * numSeries: (Optional, Default 50)  quantity of random series to insert the data.
+
+## API Request Documentation
+
+**Single Id Insertion Example**
+
+Method: PUT
+
+EndPoint: /observation/single
+
+Object Request:
+
+>OPTION 1:
+>{
+>		seriesId: {{Identifier}},
+>		value: {{Value}},
+>		time: {{Time in ISO Standar Format Or Timestamp}}
+>}
+
+>OPTION 2:
+>{
+>		foi: {{Foi name identifier}},
+>		procedure: {{Sensor name identifier}},
+>		property: {{Property name identifier}},
+>		value: {{Value}},
+>		time: {{Time in ISO Standar Format Or Timestamp}}
+>}

@@ -174,7 +174,7 @@ EndPoint Without File: /observation/csv/nofile
 Object Request:
 
 > OPTION 1
-> <Foi name identifier>;<Procedure name identifier>;<Property name identifier>;<Time in ISO Standar Format Or Timestamp>;<Value as number>;<Unit name identifier | Optional>;
+> <"Foi name identifier">;<"Procedure name identifier">;<"Property name identifier">;<"Time in ISO Standar Format Or Timestamp">;<"Value as number">;<"Unit name identifier | Optional">;
 
 > OPTION 2
-> <Number Series Identifier>;<Time in ISO Standar Format Or Timestamp>;<Value as number>;<Unit name identifier | Optional>;
+> <"Number Series Identifier">;<"Time in ISO Standar Format Or Timestamp">;<"Value as number">;<"Unit name identifier | Optional">;

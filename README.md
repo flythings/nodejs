@@ -20,6 +20,7 @@ The general properties configuration:
 ## Temp Single Triple Insertion
 
 File: clients/tempSingleTripleInsertion.js
+
 Execution: node clients/tempSingleTripleInsertion.js (from this path)
 
 Available Properties:
@@ -29,7 +30,9 @@ Available Properties:
 ## Random Id From Date Insertion
 
 Description: random data insertions to generate observations from specific date to another specific date, with specific series identifier. 
+
 File: clients/randomIdFromDateInsertion.js
+
 Execution: node clients/randomIdFromDateInsertion.js (from this path)
 
 Available Properties:
@@ -42,7 +45,9 @@ Available Properties:
 ## Random Triple From Date Insertion
 
 Description: random data insertions to generate observations from specific date to another specific date, without series identifier, but with the things names.
+
 File: clients/randomTripleInsertion.js
+
 Execution: node clients/randomMultipleTripleInsertion.js (from this path)
 
 Available Properties:
@@ -57,7 +62,9 @@ Available Properties:
 ## Random Single Id Insertion
 
 Description: random data insertion with an specific frequency and series identifier.
+
 File: clients/randomSingleTripleInsertion.js
+
 Execution: node clients/randomSingleTripleInsertion.js (from this path)
 
 Available Properties:
@@ -67,7 +74,9 @@ Available Properties:
 ## Random Single Triple Insertion
 
 Description: random data insertion with an specific frequency and series identifier unkown, but with the things names.
+
 File: clients/randomSingleTripleInsertion.js
+
 Execution: node clients/randomSingleTripleInsertion.js (from this path)
 
 Available Properties:
@@ -79,7 +88,9 @@ Available Properties:
 ## Random Multiple Triple Insertion
 
 Description: random data insertion with an specific frequency and series identifier unkown, but with the things names, and multiple observations each request.
+
 File: clients/randomMultipleTripleInsertion.js
+
 Execution: node clients/randomMultipleTripleInsertion.js (from this path)
 
 Available Properties:
